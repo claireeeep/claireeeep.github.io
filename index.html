@@ -1,101 +1,216 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Claire Purslow</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="avatar.jpg" sizes="16x16">
+<link rel="icon" type="image/png" href="avatar.jpg" sizes="32x32">
+<link rel="icon" type="image/png" href="avatar.jpg" sizes="96x96">
+<style>
+html { 
+	background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, rgb(153, 255, 102), rgb(59, 255, 255)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, red, rgba(252,3,66,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, red, rgba(252,3,66,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(top, red, rgba(252,121,5,1)); /* Standard syntax */
+}
+.prev, .next {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.2);
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+	left:0;
+	}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+body {
+    padding:0;
+    margin:0;
+	font-family: 'Inconsolata';
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+* {
+    box-sizing:border-box;
+    }
+h1, h2, ul {
+padding-top:20px;
+padding-bottom:20px;
+color: rgba(0, 102, 102,1);
+cursor:default;
+opacity:1;
+}
+h1 {
+font-size:50px;
+padding: 0  ;
+}
+a {
+color:black;}
+span {
+transition: color 0.2s linear;
+}
+span:hover {
+color : red;
+}
+div.container {
+	margin: 20px auto;
+    width: 50%;
+	text-align:center;
+    padding: 20px;
+	background: rgba(204, 255, 255,0.7);
+	border: 0px solid #000000;
+	border-radius: 10px;
+}
+img {
+border: 0px solid #B2499E;
+border-radius:100%;
+height:150px;
+margin-top:20px;
+}
+/* Icons */
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1>Claire Purslow</h1>
-							<p>19. University of Edinburgh.</p> 
-							<p>Studying for a Masters in Informatics.</p>
-							<p>Loves ice cream.</p>
-						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-							</div>
-							<ul class="actions">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						-->
-						<footer>
+		ul.icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+			margin-top: -0.675em;
+			margin-bottom:1.5em;
+		}
+
+			ul.icons li {
+				display: inline-block;
+				padding: 0.675em 0.5em;
+				
+			}
+
+				ul.icons li a {
+					text-decoration: none;
+					position: relative;
+					display: block;
+					width: 5em;
+					height: 5em;
+					border-radius: 10%;
+border: solid 1px rgba(49,245,245,1);
+					line-height: 5em;
+					overflow: hidden;
+					text-align: center;
+					text-indent: 0;
+					white-space: nowrap;
+background:rgba(246, 198, 237,0);
+				}
+					ul.icons li a:before {
+						-moz-osx-font-smoothing: grayscale;
+						-webkit-font-smoothing: antialiased;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-transform: none !important;
+					}
+					ul.icons li a:before {
+						text-shadow: 1.25px 0px 0px #c8cccf;
+					}
+					ul.icons li a:hover:before {
+						text-shadow: 1.25px 0px 0px #ff7496;
+					}
+					ul.icons li a:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: inherit;
+						height: inherit;
+						font-size: 1.85rem;
+						line-height: inherit;
+						text-align: center;
+						text-indent: 0;
+					}
+					ul.icons li a:hover {
+						background: rgba(49,245,245,1);	
+					}
+			.container a {
+				text-decoration: none;
+					display: block;
+					width: 13em;
+					height: 5em;
+					border-radius: 10px;
+border: solid 1px rgba(49,245,245,1);
+					line-height: 5em;
+					text-align: center;
+					text-indent: 0;
+					white-space: nowrap;
+background:rgba(246, 198, 237,0);
+					margin: 0 auto;
+				}
+				.container a:hover {
+						background: rgba(49,245,245,1);	
+					}
+			#links a{
+			margin:5px auto;
+			}
+			@media screen and (max-width: 480px) {
+				html {
+				background: #E699D7;
+				}
+				div.container {
+				margin: 0 auto;
+				width:100%;
+				border-radius:0px;
+				}
+				.prev, .next {
+				z-index:-1;
+				}
+				ul.icons li a:before {
+					font-size: 1.5rem;
+				}
+				
+
+			}
+			
+</style>
+</head>
+<body>
+<div class="container">
+<img src="avatar.JPG">
+<h1><span>C</span><span>l</span><span>a</span><span>i</span><span>r</span><span>e</span> <span>P</span><span>u</span><span>r</span><span>s</span><span>l</span><span>o</span><span>w</span></h1>
+<h2>An Informatics student at the University of Edinburgh.</h2>
+<h2>Likes ice cream. Cries at fictional characters a lot.</h2>
+<footer>
 							<ul class="icons">
-							    <li><a href="https://uk.linkedin.com/in/clairepurslow" class="fa-linkedin">Linkedin</a></li>
-								<li><a href="https://github.com/clairepurslow" class="fa-github">Github</a></li>
-								<li><a href="https://twitter.com/dr_capaldi" class="fa-twitter">Twitter</a></li>
-								<li><a href="https://www.instagram.com/claireelizaa/" class="fa-instagram">Instagram</a></li>
-								<li><a href="https://www.facebook.com/claire.purslow.1?fref=ts" class="fa-facebook">Facebook</a></li>
-								<li><a href="https://www.flickr.com/photos/clairepurslow/" class="fa-flickr">Flickr</a></li>
+							    <li><a href="https://uk.linkedin.com/in/clairepurslow">Linkedin</a></li>
+								<li><a href="https://github.com/clairepurslow">Github</a></li>
+								<li><a href="https://twitter.com/itsallclairenow">Twitter</a></li>
+								<li><a href="https://www.instagram.com/claireelizaa/">Instagram</a></li>
+								<li><a href="https://www.facebook.com/claire.purslow.1?fref=ts">Facebook</a></li>
+								<li><a href="https://www.flickr.com/photos/clairepurslow/">Flickr</a></li>
 							</ul>
 						</footer>
-					</section>
+						<div id="links">
+						<a href="contractions.html">Contraction Tool</a>
+						<a href="gallery.html">Gallery</a>
+						<a href="countdowntimer.html">CountDown Timer</a>
+						<a href="https://williamsalo.tumblr.com">Tumblr Theme One</a>
+						<a href="https://martinlevy.tumblr.com">Tumblr Theme Two</a>
+						<a href="cookery_website/homepage.html">Cookery Website Template</a>
+						</div>
+</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Claire Purslow</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
 
-			</div>
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
 
-	</body>
+
+</body>
 </html>
